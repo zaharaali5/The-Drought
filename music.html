@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music - The Drought</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="music.html" class="nav-link active">Music</a></li>
+                <li><a href="videos.html" class="nav-link">Videos</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About The Band</h2>
+            <p>Experience the raw power of alternative rock. The Drought brings intensity, authenticity, and innovation to every performance. From intimate venues to festival stages, we deliver unforgettable sonic experiences.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="music-grid">
+                <div class="music-card">
+                    <div class="music-placeholder">🎵</div>
+                    <h3>Album Title</h3>
+                    <p class="year">2024</p>
+                    <p class="description">Debut album featuring our most powerful tracks</p>
+                </div>
+                <div class="music-card">
+                    <div class="music-placeholder">🎵</div>
+                    <h3>Single: Emotion</h3>
+                    <p class="year">2025</p>
+                    <p class="description">A raw and intense exploration of inner turmoil</p>
+                </div>
+                <div class="music-card">
+                    <div class="music-placeholder">🎵</div>
+                    <h3>Single: Sonic Wave</h3>
+                    <p class="year">2025</p>
+                    <p class="description">Innovation meets rock in this experimental track</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 The Drought. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

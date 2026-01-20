@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - The Drought</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="music.html" class="nav-link">Music</a></li>
+                <li><a href="videos.html" class="nav-link active">Videos</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Videos Section -->
+    <section class="page-header">
+        <h1>Videos</h1>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>▶</span>
+                    </div>
+                    <h3>Music Video: Emotion</h3>
+                    <p class="description">Official music video from our 2025 single</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>▶</span>
+                    </div>
+                    <h3>Live Performance</h3>
+                    <p class="description">Highlights from our sold-out show in Salt Lake City</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>▶</span>
+                    </div>
+                    <h3>Behind the Scenes</h3>
+                    <p class="description">Studio sessions and creative process</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>▶</span>
+                    </div>
+                    <h3>Band Documentary</h3>
+                    <p class="description">The story of The Drought</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 The Drought. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
