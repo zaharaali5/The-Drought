@@ -519,10 +519,13 @@ body:not(.homepage) {
         transition: max-height 0.3s ease;
         z-index: 99;
         text-align: center;
+        padding: 2rem;
     }
 
     .nav-menu.active {
         max-height: 500px;
+        background-color: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(3px);
     }
 
     .nav-menu li {
