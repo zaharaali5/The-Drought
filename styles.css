@@ -25,19 +25,7 @@ body {
 }
 
 .homepage {
-    background-image: url('Bandofficial.9.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
-@media (max-width: 768px) {
-    .homepage {
-        background-image: url('Bandofficial.5.jpg') !important;
-        background-attachment: scroll;
-        background-size: cover;
-    }
+    background-color: var(--primary-dark);
 }
 
 .container {
@@ -124,11 +112,20 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-image: url('Bandofficial.9.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: url('Bandofficial.5.jpg');
+        background-attachment: scroll;
+    }
 }
 
 .hero::before {
