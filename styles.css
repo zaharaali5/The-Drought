@@ -34,6 +34,7 @@ body {
 
 @media (max-width: 768px) {
     .homepage {
+        background-image: url('Bandofficial.5.jpg');
         background-attachment: scroll;
         background-size: cover;
     }
