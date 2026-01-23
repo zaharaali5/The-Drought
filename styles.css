@@ -499,6 +499,24 @@ body {
     font-size: 0.7rem;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-gold);
+    transform: scale(1.1);
+}
+
 body:not(.homepage) {
     background-color: var(--primary-dark);
 }
