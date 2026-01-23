@@ -516,20 +516,23 @@ body:not(.homepage) {
         gap: 2rem;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, visibility 0.3s ease;
         z-index: 99;
         text-align: center;
-        padding: 2rem;
+        padding: 0;
         opacity: 0;
         pointer-events: none;
+        visibility: hidden;
     }
 
     .nav-menu.active {
         max-height: 500px;
         background-color: rgba(0, 0, 0, 0.35);
         backdrop-filter: blur(3px);
+        padding: 2rem;
         opacity: 1;
         pointer-events: auto;
+        visibility: visible;
     }
 
     .nav-menu li {
