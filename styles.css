@@ -32,6 +32,13 @@ body {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+    .homepage {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -583,9 +590,27 @@ body:not(.homepage) {
         grid-template-columns: 1fr;
     }
 
+    .contact-info-simple {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        max-width: 100%;
+    }
+
     .music-grid,
     .video-grid {
         grid-template-columns: 1fr;
+    }
+
+    .shows-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .show-card {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
