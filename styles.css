@@ -25,7 +25,7 @@ body {
 }
 
 .homepage {
-    background-image: url('bandofficial.9.jpg');
+    background-image: url('Bandofficial.9.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -34,7 +34,7 @@ body {
 
 @media (max-width: 768px) {
     .homepage {
-        background-image: url('Bandofficial.5.jpg');
+        background-image: url('Bandofficial.5.jpg') !important;
         background-attachment: scroll;
         background-size: cover;
     }
