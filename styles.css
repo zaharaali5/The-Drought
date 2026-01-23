@@ -22,6 +22,9 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     letter-spacing: 0.5px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .homepage {
@@ -166,6 +169,65 @@ body {
     }
 }
 
+/* Contact Page Hero */
+.contactpage {
+    background-color: var(--primary-dark);
+}
+
+.contactpage .navbar {
+    background-color: transparent;
+    position: fixed;
+}
+
+.contact-hero {
+    background-image: url('bandofficial.4b&w.jpg');
+    background-position: center 40%;
+}
+
+.contact-hero .contact-info-simple {
+    background-color: transparent;
+}
+
+.contact-hero .contact-item {
+    background-color: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(212, 31, 61, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-hero .contact-item:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 31, 61, 0.3);
+}
+
+.contactpage .footer {
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.contactpage .footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contactpage .footer .container {
+    position: relative;
+    z-index: 1;
+}
+
 /* ====================================
    ABOUT SECTION
    ==================================== */
@@ -173,6 +235,7 @@ body {
     padding: 5rem 0;
     background-color: var(--primary-dark);
     text-align: center;
+    flex: 1;
 }
 
 .about h2 {
@@ -219,6 +282,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
 }
 
 .content .container {
