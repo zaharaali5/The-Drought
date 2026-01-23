@@ -516,16 +516,20 @@ body:not(.homepage) {
         gap: 2rem;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
         z-index: 99;
         text-align: center;
         padding: 2rem;
+        opacity: 0;
+        pointer-events: none;
     }
 
     .nav-menu.active {
         max-height: 500px;
         background-color: rgba(0, 0, 0, 0.35);
         backdrop-filter: blur(3px);
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .nav-menu li {
