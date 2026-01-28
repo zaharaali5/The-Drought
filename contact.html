@@ -33,11 +33,11 @@
                 <div class="contact-item">
                     <h3>Management</h3>
                     <p>Zahara Ali</p>
-                    <p>Zahara.a.ali55 [at] gmail [dot] com</p>
+                    <p><a href="#" id="email1" class="email-link"></a></p>
                 </div>
                 <div class="contact-item">
                     <h3>All Other Inquiries</h3>
-                    <p>TheDroughtSLC [at] gmail [dot] com</p>
+                    <p><a href="#" id="email2" class="email-link"></a></p>
                 </div>
             </div>
         </div>
@@ -61,6 +61,26 @@
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
         }
+
+        // Email obfuscation
+        function decodeEmail(encoded) {
+            return atob(encoded);
+        }
+
+        // Decode and set emails on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Management email: Zahara.a.ali55@gmail.com
+            const email1 = decodeEmail('WmFoYXJhLmEuYWxpNTVAZ21haWwuY29t');
+            const email1Element = document.getElementById('email1');
+            email1Element.href = 'mailto:' + email1;
+            email1Element.textContent = email1;
+
+            // Inquiries email: TheDroughtSLC@gmail.com
+            const email2 = decodeEmail('VGhlRHJvdWdodFNMQ0BnbWFpbC5jb20=');
+            const email2Element = document.getElementById('email2');
+            email2Element.href = 'mailto:' + email2;
+            email2Element.textContent = email2;
+        });
     </script>
 </body>
 </html>
