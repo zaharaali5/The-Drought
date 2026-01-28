@@ -101,18 +101,24 @@
                     const city = show.venue.city;
                     const region = show.venue.region;
                     const location = `${city}${region ? ', ' + region : ''}`;
+                    
+                    // Get image from Bandsintown or use default
+                    const imageUrl = show.image_url || show.venue.image_url || '';
 
                     showsHtml += `
                         <div class="show-card">
-                            <div class="show-date">
-                                <div class="date-day">${eventDate.getDate()}</div>
-                                <div class="date-month">${eventDate.toLocaleDateString('en-US', { month: 'short' })}</div>
-                            </div>
-                            <div class="show-details">
-                                <h3>${venue}</h3>
-                                <p class="show-location">${location}</p>
-                                <p class="show-time">${formattedTime}</p>
-                                <a href="${show.url}" target="_blank" class="show-link">Get Tickets</a>
+                            ${imageUrl ? `<img src="${imageUrl}" alt="${venue}" class="show-image">` : ''}
+                            <div class="show-info">
+                                <div class="show-date">
+                                    <div class="date-day">${eventDate.getDate()}</div>
+                                    <div class="date-month">${eventDate.toLocaleDateString('en-US', { month: 'short' })}</div>
+                                </div>
+                                <div class="show-details">
+                                    <h3>${venue}</h3>
+                                    <p class="show-location">${location}</p>
+                                    <p class="show-time">${formattedTime}</p>
+                                    <a href="${show.url}" target="_blank" class="show-link">Get Tickets</a>
+                                </div>
                             </div>
                         </div>
                     `;
