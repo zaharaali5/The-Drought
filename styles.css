@@ -629,7 +629,7 @@ body:not(.homepage) {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        top: 1.2rem;
+        top: 1.5rem;
     }
 
     .nav-menu {
