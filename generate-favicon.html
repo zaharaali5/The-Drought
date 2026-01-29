@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate TD Favicon</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid #6B3410;
+            margin: 20px;
+        }
+        button {
+            background: #6B3410;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #8B4513;
+        }
+    </style>
+</head>
+<body>
+    <h1>TD Favicon Generator</h1>
+    <canvas id="favicon" width="512" height="512"></canvas>
+    <button onclick="downloadFavicon()">Download favicon.png</button>
+
+    <script>
+        const canvas = document.getElementById('favicon');
+        const ctx = canvas.getContext('2d');
+
+        // Fill background
+        ctx.fillStyle = '#0a0a0a';
+        ctx.fillRect(0, 0, 512, 512);
+
+        // Draw TD text
+        ctx.fillStyle = '#6B3410';
+        ctx.font = 'bold 280px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('TD', 256, 256);
+
+        function downloadFavicon() {
+            const link = document.createElement('a');
+            link.download = 'favicon.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>
