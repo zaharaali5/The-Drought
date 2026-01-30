@@ -1,3 +1,24 @@
+@media (min-width: 900px) {
+    .bit-html-export {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        padding: 2rem 2rem 1rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    }
+    .bit-table {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+    .bit-table td {
+        padding: 16px 18px;
+        font-size: 1.1rem;
+    }
+    .bit-table .bit-cta {
+        width: 20%;
+    }
+}
 /* ====================================
    GLOBAL STYLES
    ==================================== */
@@ -630,6 +651,11 @@ body:not(.homepage) {
     .hamburger {
         display: flex;
         top: 1.5rem;
+        border: 2px solid var(--accent-gold);
+        border-radius: 8px;
+        padding: 8px;
+        background: rgba(0,0,0,0.7);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
     .nav-menu {
