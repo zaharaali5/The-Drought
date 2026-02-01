@@ -42,7 +42,12 @@ html, body {
 .aboutpage .footer .social-links {
     position: relative;
     z-index: 103;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
+
 .aboutpage, .aboutpage html {
     min-height: 100vh;
 }
@@ -830,4 +835,18 @@ body:not(.homepage) {
     .page-header h1 {
         font-size: 1.5rem;
     }
+}
+
+/* Fix for overlapping issue with social icons and text in about page */
+.aboutpage .footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.aboutpage .footer p {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--text-secondary);
 }
