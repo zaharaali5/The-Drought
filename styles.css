@@ -1,3 +1,51 @@
+html, body {
+    overflow: hidden !important;
+    height: 100vh;
+    min-height: 100vh;
+}
+.aboutpage, .aboutpage html {
+    overflow: hidden !important;
+    height: 100vh;
+    min-height: 100vh;
+}
+.blur-bg {
+    background: rgba(20, 20, 20, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+}
+.aboutpage .hero {
+    background: none !important;
+}
+.aboutpage .navbar,
+.aboutpage .footer {
+    background: transparent !important;
+    box-shadow: none !important;
+    position: relative;
+    z-index: 2;
+}
+.aboutpage, .aboutpage html {
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.aboutpage {
+    background-image: url('Bandofficial.6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.aboutpage {
+    background-image: url('Bandofficial.6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 @media (min-width: 900px) {
     .bit-html-export {
         max-width: 900px;
@@ -156,16 +204,7 @@ body {
     }
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    pointer-events: none;
-}
+
 
 .hero-content {
     position: relative;

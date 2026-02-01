@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - The Drought</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="aboutpage">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="shows.html" class="nav-link">Shows</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="blur-bg" style="max-width:700px; margin: 0 auto; padding: 2rem 2.5rem; border-radius: 18px;">
+                <h2 class="about-title" style="font-size:2rem; font-weight:700; margin-bottom:1.5rem; color:#fff;">About The Drought</h2>
+                <p style="text-align:center; margin-bottom:1.5rem; color: #fff;">
+                    The Drought makes alternative rock in Salt Lake City. We are equally invested in lyricism as we are in arrangement: this balance makes for songs that have elements of folk, rock, indie, and jazz. The Drought is about erosion, quick infrastructure, economic ruin, and the overlay of passionate love that consumes. It is impossible to escape obsession amidst the absurdism of modernity, and this heartache is amplified by its own insignificance.
+                </p>
+                <p style="text-align:center; font-size:0.95em; color:#ccc; margin-top:0.5rem;">
+                    <em>For fans of: The Strokes, Radiohead, The Smiths, Coldplay, Steely Dan, Blur, and Oasis.</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/thedrought_slc/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61578166929076" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://open.spotify.com/artist/3uwmjfetdUzoi2ZiRA4NyK" target="_blank" rel="noopener" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://thedroughtslc.bandcamp.com/music" target="_blank" rel="noopener" aria-label="Bandcamp"><i class="fab fa-bandcamp"></i></a>
+            </div>
+            <p>&copy; 2026 The Drought. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
