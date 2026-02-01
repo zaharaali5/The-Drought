@@ -3,11 +3,6 @@ html, body {
     height: 100vh;
     min-height: 100vh;
 }
-.aboutpage, .aboutpage html {
-    overflow: hidden !important;
-    height: 100vh;
-    min-height: 100vh;
-}
 .blur-bg {
     background: rgba(20, 20, 20, 0.35);
     backdrop-filter: blur(8px);
@@ -16,21 +11,40 @@ html, body {
     opacity: 1 !important;
     transition: none !important;
     animation: none !important;
+    max-height: 72vh;
+    overflow-y: auto;
 }
 .aboutpage .hero {
     background: none !important;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
 }
 .aboutpage .navbar,
 .aboutpage .footer {
     background: transparent !important;
     box-shadow: none !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.aboutpage .footer .container {
     position: relative;
-    z-index: 2;
+    z-index: 102;
+}
+
+.aboutpage .footer .social-links {
+    position: relative;
+    z-index: 103;
 }
 .aboutpage, .aboutpage html {
-    height: 100vh;
     min-height: 100vh;
-    overflow: hidden;
 }
 .aboutpage {
     background-image: url('Bandofficial.6.jpg');
@@ -659,6 +673,8 @@ body {
     text-align: center;
     color: var(--text-secondary);
     font-size: 0.7rem;
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 .social-links {
