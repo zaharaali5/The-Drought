@@ -837,16 +837,19 @@ body:not(.homepage) {
     }
 }
 
-/* Fix for overlapping issue with social icons and text in about page */
-.aboutpage .footer .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+/* Adjust text size for "About The Drought" section on mobile */
+@media (max-width: 768px) {
+    .aboutpage .hero .hero-content .blur-bg {
+        padding: 1rem 1.5rem;
+    }
+
+    .aboutpage .hero .about-title {
+        font-size: 1.5rem;
+    }
+
+    .aboutpage .hero .blur-bg p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
 }
 
-.aboutpage .footer p {
-    margin-top: 2rem;
-    text-align: center;
-    color: var(--text-secondary);
-}
