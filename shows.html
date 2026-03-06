@@ -160,6 +160,85 @@
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
         }
+
+        const requestTimestamps = [];
+        const RATE_LIMIT = 60; // Maximum requests allowed
+        const TIME_WINDOW = 60 * 1000; // Time window in milliseconds (1 minute)
+
+        async function fetchShows() {
+            const now = Date.now();
+
+            // Remove timestamps outside the time window
+            while (requestTimestamps.length > 0 && requestTimestamps[0] <= now - TIME_WINDOW) {
+                requestTimestamps.shift();
+            }
+
+            if (requestTimestamps.length >= RATE_LIMIT) {
+                console.error("Rate limit exceeded. Please wait before making more requests.");
+                return;
+            }
+
+            requestTimestamps.push(now);
+
+            const apiKey = "48e282231194a007df9d92c90ff18298"; // Updated API key for The Drought's Bandsintown
+            const artistName = "The Drought";
+            const apiUrl = `https://rest.bandsintown.com/artists/${encodeURIComponent(artistName)}/events?app_id=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error("Failed to fetch shows");
+                }
+
+                const shows = await response.json();
+                const showsContainer = document.querySelector(".shows-container");
+
+                // Clear existing content
+                showsContainer.innerHTML = "<h1>Upcoming Shows</h1>";
+
+                // Create a table for the shows
+                const table = document.createElement("table");
+                table.className = "bit-table";
+
+                // Filter out past shows dynamically
+                const today = new Date();
+                today.setHours(0, 0, 0, 0); // Normalize to midnight for comparison
+
+                const upcomingShows = shows.filter(show => {
+                    const showDate = new Date(show.datetime);
+                    showDate.setHours(0, 0, 0, 0); // Normalize to midnight for comparison
+                    return showDate >= today;
+                });
+
+                upcomingShows.forEach(show => {
+                    const row = document.createElement("tr");
+
+                    const dateCell = document.createElement("td");
+                    dateCell.innerHTML = `<strong>${new Date(show.datetime).toLocaleDateString()}</strong><div>${show.venue.city}, ${show.venue.region}</div>`;
+
+                    const rsvpCell = document.createElement("td");
+                    rsvpCell.className = "bit-cta";
+                    rsvpCell.innerHTML = `<a href="${show.url}" target="_blank">RSVP</a>`;
+
+                    const ticketsCell = document.createElement("td");
+                    ticketsCell.className = "bit-cta";
+                    ticketsCell.innerHTML = `<a href="${show.offers[0]?.url || '#'}" target="_blank">TICKETS</a>`;
+
+                    row.appendChild(dateCell);
+                    row.appendChild(rsvpCell);
+                    row.appendChild(ticketsCell);
+
+                    table.appendChild(row);
+                });
+
+                showsContainer.appendChild(table);
+            } catch (error) {
+                console.error("Error fetching shows:", error);
+            }
+        }
+
+        // Fetch shows on page load
+        document.addEventListener("DOMContentLoaded", fetchShows);
     </script>
 </body>
 </html>
