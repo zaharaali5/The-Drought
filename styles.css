@@ -901,3 +901,9 @@ body:not(.homepage) {
     }
 }
 
+@media (min-width: 769px) {
+    .rotating-image {
+        width: 25%; /* Make the image slightly smaller on desktop */
+    }
+}
+
