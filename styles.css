@@ -15,9 +15,9 @@ body {
 }
 
 html, body {
-    overflow: hidden !important;
-    height: 100vh;
-    min-height: 100vh;
+    overflow-y: auto !important;
+    height: auto;
+    min-height: 100%;
 }
 .blur-bg {
     background: rgba(20, 20, 20, 0.35);
