@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self' https://rest.bandsintown.com https://api.bandsintown.com; frame-src 'self' https://bandcamp.com https://www.youtube.com https://open.spotify.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://widgetv3.bandsintown.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self' https://rest.bandsintown.com https://api.bandsintown.com; frame-src 'self' https://bandcamp.com https://www.youtube.com https://open.spotify.com;">
     <title>Music | The Drought</title>
-    <meta name="description" content="Listen to music from The Drought and explore releases and singles.">
+    <meta name="description" content="Music and releases from The Drought.">
     <link rel="canonical" href="https://www.thedrought.band/music.html">
     <meta property="og:title" content="Music | The Drought">
-    <meta property="og:description" content="Listen to music from The Drought and explore releases and singles.">
+    <meta property="og:description" content="Music and releases from The Drought.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.thedrought.band/music.html">
     <meta property="og:site_name" content="The Drought">
@@ -17,7 +17,7 @@
     <meta name="twitter:image" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Music | The Drought">
-    <meta name="twitter:description" content="Listen to music from The Drought and explore releases and singles.">
+    <meta name="twitter:description" content="Music and releases from The Drought.">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -33,42 +33,88 @@
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="music.html" class="nav-link active">Music</a></li>
-                <li><a href="videos.html" class="nav-link">Videos</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2>About The Band</h2>
-            <p>Experience the raw power of alternative rock. The Drought brings intensity, authenticity, and innovation to every performance. From intimate venues to festival stages, we deliver unforgettable sonic experiences.</p>
+    <!-- Music Section -->
+    <section class="music-content" style="margin-top: 9rem;">
+        <div class="container" style="display: flex; align-items: center; justify-content: center; gap: 2rem;">
+            <img src="IMG_1614.jpeg" alt="Pet Names Cover" class="highlight-image" style="max-width: 200px; height: auto;">
+            <div class="highlight-text" style="text-align: left;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Pet Names</h2>
+                <a href="https://ffm.to/the-drought-pet-names" class="presave-button" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background-color: #000; color: #fff; text-decoration: none; border-radius: 5px; border: 2px solid #fff; cursor: pointer; text-align: center; font-size: 1rem;">
+                    Presave Now
+                </a>
+            </div>
         </div>
     </section>
 
-    <section class="content">
+    <!-- Divider -->
+    <hr style="border: 1px solid #4A4A4A; margin: 2rem 0;">
+
+    <!-- Shows Section -->
+    <section class="shows-content">
         <div class="container">
-            <div class="music-grid">
-                <div class="music-card">
-                    <div class="music-placeholder">🎵</div>
-                    <h3>Album Title</h3>
-                    <p class="year">2024</p>
-                    <p class="description">Debut album featuring our most powerful tracks</p>
-                </div>
-                <div class="music-card">
-                    <div class="music-placeholder">🎵</div>
-                    <h3>Single: Emotion</h3>
-                    <p class="year">2025</p>
-                    <p class="description">A raw and intense exploration of inner turmoil</p>
-                </div>
-                <div class="music-card">
-                    <div class="music-placeholder">🎵</div>
-                    <h3>Single: Sonic Wave</h3>
-                    <p class="year">2025</p>
-                    <p class="description">Innovation meets rock in this experimental track</p>
-                </div>
+            <div class="shows-container">
+                <h1>Upcoming Shows</h1>
+                <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+                <a class="bit-widget-initializer"
+                    data-artist-name="id_4854520"
+                    data-background-color="rgba(0,0,0,1)"
+                    data-separator-color="rgba(221,221,221,1)"
+                    data-text-color="rgba(255,255,255,1)"
+                    data-font="Verdana"
+                    data-auto-style="true"
+                    data-button-label-capitalization="uppercase"
+                    data-header-capitalization="uppercase"
+                    data-location-capitalization="capitalize"
+                    data-venue-capitalization="capitalize"
+                    data-local-dates-position="tab"
+                    data-display-lineup="false"
+                    data-display-start-time="false"
+                    data-social-share-icon="false"
+                    data-display-limit="all"
+                    data-date-format="MMM. D, YYYY"
+                    data-date-orientation="horizontal"
+                    data-date-border-color="#4A4A4A"
+                    data-date-border-width="1px"
+                    data-date-capitalization="capitalize"
+                    data-date-border-radius="10px"
+                    data-event-ticket-cta-size="medium"
+                    data-event-ticket-text="TICKETS"
+                    data-event-ticket-icon="false"
+                    data-event-ticket-cta-text-color="rgba(255,255,255,1)"
+                    data-event-ticket-cta-bg-color="rgba(74,74,74,1)"
+                    data-event-ticket-cta-border-color="rgba(74,74,74,1)"
+                    data-event-ticket-cta-border-width="0px"
+                    data-event-ticket-cta-border-radius="2px"
+                    data-sold-out-button-text-color="rgba(255,255,255,1)"
+                    data-sold-out-button-background-color="rgba(74,74,74,1)"
+                    data-sold-out-button-border-color="rgba(74,74,74,1)"
+                    data-sold-out-button-clickable="true"
+                    data-event-rsvp-position="left"
+                    data-event-rsvp-cta-size="medium"
+                    data-event-rsvp-only-show-icon="false"
+                    data-event-rsvp-text="RSVP"
+                    data-event-rsvp-icon="false"
+                    data-event-rsvp-cta-text-color="rgba(74,74,74,1)"
+                    data-event-rsvp-cta-bg-color="rgba(255,255,255,1)"
+                    data-event-rsvp-cta-border-color="rgba(74,74,74,1)"
+                    data-event-rsvp-cta-border-width="1px"
+                    data-event-rsvp-cta-border-radius="2px"
+                    data-follow-section-position="top"
+                    data-follow-section-alignment="center"
+                    data-follow-section-header-text="Get updates on new shows, new music, and more"
+                    data-follow-section-cta-size="medium"
+                    data-follow-section-cta-text="FOLLOW"
+                    data-follow-section-cta-icon="false"
+                    data-follow-section-cta-text-color="rgba(255,255,255,1)"
+                    data-follow-section-cta-bg-color="rgba(74,74,74,1)"
+                ></a>
             </div>
         </div>
     </section>
@@ -91,6 +137,87 @@
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
         }
+
+        const requestTimestamps = [];
+        const RATE_LIMIT = 60; // Maximum requests allowed
+        const TIME_WINDOW = 60 * 1000; // Time window in milliseconds (1 minute)
+
+        async function fetchShows() {
+            const now = Date.now();
+
+            // Remove timestamps outside the time window
+            while (requestTimestamps.length > 0 && requestTimestamps[0] <= now - TIME_WINDOW) {
+                requestTimestamps.shift();
+            }
+
+            if (requestTimestamps.length >= RATE_LIMIT) {
+                console.error("Rate limit exceeded. Please wait before making more requests.");
+                return;
+            }
+
+            requestTimestamps.push(now);
+
+            const apiKey = "48e282231194a007df9d92c90ff18298"; // Updated API key for The Drought's Bandsintown
+            const artistName = "The Drought";
+            const apiUrl = `https://rest.bandsintown.com/artists/${encodeURIComponent(artistName)}/events?app_id=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error("Failed to fetch shows");
+                }
+
+                const shows = await response.json();
+                const showsContainer = document.querySelector(".shows-container");
+
+                // Clear existing content
+                showsContainer.innerHTML = "<h1>Upcoming Shows</h1>";
+
+                // Create a table for the shows
+                const table = document.createElement("table");
+                table.className = "bit-table";
+
+                // Filter out past shows dynamically
+                const today = new Date();
+                today.setHours(0, 0, 0, 0); // Normalize to midnight for comparison
+
+                const upcomingShows = shows.filter(show => {
+                    const showDate = new Date(show.datetime);
+                    showDate.setHours(0, 0, 0, 0); // Normalize to midnight for comparison
+                    return showDate >= today;
+                });
+
+                upcomingShows.forEach(show => {
+                    const row = document.createElement("tr");
+
+                    const dateCell = document.createElement("td");
+                    dateCell.innerHTML = `<strong>${new Date(show.datetime).toLocaleDateString()}</strong><div>${show.venue.city}, ${show.venue.region}</div>`;
+
+                    const rsvpCell = document.createElement("td");
+                    rsvpCell.className = "bit-cta";
+                    rsvpCell.innerHTML = `<a href="${show.url}" target="_blank">RSVP</a>`;
+
+                    const ticketsCell = document.createElement("td");
+                    ticketsCell.className = "bit-cta";
+                    ticketsCell.innerHTML = `<a href="${show.offers[0]?.url || '#'}" target="_blank">TICKETS</a>`;
+
+                    row.appendChild(dateCell);
+                    row.appendChild(rsvpCell);
+                    row.appendChild(ticketsCell);
+
+                    table.appendChild(row);
+                });
+
+                showsContainer.appendChild(table);
+            } catch (error) {
+                console.error("Error fetching shows:", error);
+            }
+        }
+
+        // Fetch shows on page load
+        document.addEventListener("DOMContentLoaded", fetchShows);
     </script>
 </body>
 </html>
+
+
