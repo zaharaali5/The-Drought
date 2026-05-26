@@ -170,6 +170,31 @@
         </aside>
     </div>
 
+    <div class="mobile-popup-layer" aria-label="Mobile popups">
+        <aside class="mobile-popup mobile-popup-video">
+            <div class="popup-titlebar">
+                <span>Summer Dresses Promo</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <video class="popup-promo-video" src="Summer Dresses Promo 2 - 9x16.mp4" autoplay muted loop playsinline preload="metadata" disablepictureinpicture controlslist="nofullscreen nodownload noplaybackrate noremoteplayback" aria-label="Summer Dresses promo video"></video>
+                <p>SUMMER DRESSES IS OUT LISTEN NOW</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">LISTEN NOW!!!!</a>
+            </div>
+        </aside>
+        <aside class="mobile-popup mobile-popup-pet">
+            <div class="popup-titlebar">
+                <span>Pet Name Generator</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <img class="popup-dog-image" src="doggo.jpg" alt="Golden retriever dog">
+                <p>CLICK HERE FOR PET NAMES</p>
+                <a href="https://open.spotify.com/album/1JcGyIqkJWkTRZcMPJ3370" target="_blank" rel="noopener">CLICK HERE FOR PET NAMES</a>
+            </div>
+        </aside>
+    </div>
+
     <main class="profile-page">
         <section class="profile-left">
             <article class="module profile-card">
@@ -339,7 +364,7 @@
 
             popupCloseButtons.forEach(function (button) {
                 button.addEventListener("click", function () {
-                    const popupCard = button.closest(".popup-card, .storm-popup");
+                    const popupCard = button.closest(".popup-card, .storm-popup, .mobile-popup");
                     if (popupCard) {
                         popupCard.style.display = "none";
                     }
@@ -399,7 +424,7 @@
                 });
             }
 
-            document.querySelectorAll(".popup-card, .storm-popup").forEach(makePopupDraggable);
+            document.querySelectorAll(".popup-card, .storm-popup, .mobile-popup").forEach(makePopupDraggable);
         })();
     </script>
 </body>

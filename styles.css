@@ -277,6 +277,23 @@ body {
     pointer-events: none;
 }
 
+.mobile-popup-layer {
+    display: none;
+}
+
+.mobile-popup {
+    position: absolute;
+    width: min(250px, calc(100vw - 1rem));
+    pointer-events: auto;
+    background: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #7a7a7a;
+    border-bottom: 2px solid #7a7a7a;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
+    animation: popupWobble 1.4s steps(2, end) infinite;
+}
+
 .storm-popup {
     position: absolute;
     width: clamp(170px, 19vw, 255px);
@@ -355,6 +372,36 @@ body {
     .popup-chaos,
     .popup-storm {
         display: none;
+    }
+
+    .mobile-popup-layer {
+        display: block;
+        position: fixed;
+        inset: 64px 0 0;
+        pointer-events: none;
+        z-index: 48;
+    }
+
+    .mobile-popup-video {
+        top: 0.5rem;
+        left: 0.5rem;
+        animation-delay: 0s;
+    }
+
+    .mobile-popup-pet {
+        top: 42vh;
+        right: 0.5rem;
+        animation-delay: 0.18s;
+    }
+}
+
+@media (max-width: 420px) {
+    .mobile-popup {
+        width: min(230px, calc(100vw - 0.75rem));
+    }
+
+    .mobile-popup-pet {
+        top: 46vh;
     }
 }
 
