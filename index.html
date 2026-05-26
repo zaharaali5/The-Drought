@@ -354,9 +354,26 @@
                 return atob(encoded);
             }
 
+            function tryAutoplayVideo(video) {
+                if (!video) {
+                    return;
+                }
+
+                video.muted = true;
+                video.defaultMuted = true;
+
+                const playPromise = video.play();
+                if (playPromise && typeof playPromise.catch === "function") {
+                    playPromise.catch(function () {
+                        // iOS may block autoplay until user interaction or when low power mode is enabled.
+                    });
+                }
+            }
+
             const bookingEmail = decodeEmail("dGhlZHJvdWdodHNsY0BnbWFpbC5jb20=");
             const bookUsLinkElement = document.getElementById("bookUsLink");
             const popupCloseButtons = document.querySelectorAll(".popup-close");
+            const popupVideos = document.querySelectorAll(".popup-promo-video");
 
             if (bookUsLinkElement) {
                 bookUsLinkElement.href = "mailto:" + bookingEmail;
@@ -369,6 +386,27 @@
                         popupCard.style.display = "none";
                     }
                 });
+            });
+
+            popupVideos.forEach(function (video) {
+                video.setAttribute("playsinline", "");
+                video.setAttribute("webkit-playsinline", "");
+
+                tryAutoplayVideo(video);
+
+                video.addEventListener("loadedmetadata", function () {
+                    tryAutoplayVideo(video);
+                });
+
+                document.addEventListener("visibilitychange", function () {
+                    if (!document.hidden) {
+                        tryAutoplayVideo(video);
+                    }
+                });
+
+                window.addEventListener("touchstart", function () {
+                    tryAutoplayVideo(video);
+                }, { once: true, passive: true });
             });
 
             let dragLayer = 2000;
