@@ -1,75 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Website Built & Designed by: Zahara Ali | © 2026 The Drought. All Rights Reserved. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self' https://rest.bandsintown.com https://api.bandsintown.com; frame-src 'self' https://bandcamp.com https://www.youtube.com https://open.spotify.com;">
-    <title>The Drought | Official Website</title>
-    <meta name="description" content="The Drought is an Alternative Rock Band from Salt Lake City. Official site for music, shows, and contact.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://widgetv3.bandsintown.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self' https://rest.bandsintown.com https://api.bandsintown.com; frame-src 'self' https://bandcamp.com https://www.youtube.com https://open.spotify.com https://widgetv3.bandsintown.com;">
+    <title>The Drought Official Website</title>
+    <meta name="description" content="The Drought Official Website with music, shows, and band updates.">
     <link rel="canonical" href="https://www.thedrought.band/">
-    <meta property="og:title" content="The Drought | Official Website">
-    <meta property="og:description" content="The Drought is an Alternative Rock Band from Salt Lake City. Official site for music, shows, and contact.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.thedrought.band/">
-    <meta property="og:site_name" content="The Drought">
-    <meta property="og:image" content="">
-    <meta name="twitter:image" content="">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="The Drought | Official Website">
-    <meta name="twitter:description" content="The Drought is an Alternative Rock Band from Salt Lake City. Official site for music, shows, and contact.">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="sunlady.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "MusicGroup",
-            "name": "The Drought",
-            "url": "https://www.thedrought.band/",
-            "image": "",
-            "sameAs": [
-                "https://www.instagram.com/thedrought_slc/",
-                "https://www.facebook.com/profile.php?id=61578166929076",
-                "https://open.spotify.com/artist/3uwmjfetdUzoi2ZiRA4NyK",
-                "https://thedroughtslc.bandcamp.com/music"
-            ]
-        }
-    </script>
 </head>
-<body class="homepage">
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+<body>
+    <header class="topbar" id="home">
+        <div class="topbar-inner">
+            <button class="start-btn" id="startBtn" type="button" aria-label="Open navigation menu">
+                <span class="start-icon" aria-hidden="true"></span>
+                Start
+            </button>
+            <div class="window-strip">
+                <a class="logo" href="#home">The Drought Official Website</a>
+                <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="topLinks" aria-label="Toggle navigation">Menu</button>
+                <nav class="top-links" id="topLinks">
+                    <a href="#about">About</a>
+                    <a href="#music">Music</a>
+                    <a href="#shows">Shows</a>
+                </nav>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="music.html" class="nav-link">Music</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <!-- Removed 'The Drought' and 'Alternative Rock from Salt Lake City' -->
-        </div>
-    </section>
-
-    <!-- Image Container -->
-    <div class="image-container">
-        <img src="sunlady.png" alt="Sunlady" class="rotating-image">
+    <div class="popup-chaos">
+        <aside class="popup-card popup-a">
+            <div class="popup-titlebar">
+                <span>System Warning</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <p>LISTEN NOW!!!!</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">LISTEN NOW!!!!</a>
+            </div>
+        </aside>
+        <aside class="popup-card popup-b">
+            <div class="popup-titlebar">
+                <span>Pet Name Generator</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <img class="popup-dog-image" src="doggo.jpg" alt="Golden retriever dog">
+                <p>CLICK HERE FOR PET NAMES</p>
+                <a href="https://open.spotify.com/album/1JcGyIqkJWkTRZcMPJ3370" target="_blank" rel="noopener">CLICK HERE FOR PET NAMES</a>
+            </div>
+        </aside>
+        <aside class="popup-card popup-c">
+            <div class="popup-titlebar">
+                <span>Summer Dresses</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <img class="popup-dog-image" src="summerdesstockimage.jpg" alt="Summer Dresses stock image">
+                <p>SUMMER DRESSES</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">CLICK HERE FOR YOUR FREE DESS</a>
+            </div>
+        </aside>
     </div>
 
-    <!-- Footer -->
+    <div class="popup-storm" aria-label="Promotional popups">
+        <aside class="storm-popup storm-a">
+            <div class="popup-titlebar">
+                <span>Breaking Alert</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <p>SUMMER DRESSES IS OUT LISTEN NOW</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">LISTEN NOW!!!!</a>
+            </div>
+        </aside>
+        <aside class="storm-popup storm-b">
+            <div class="popup-titlebar">
+                <span>New Song Notice</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <p>SUMMER DRESSES DROPPED LISTEN NOW</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">PRESS PLAY NOW</a>
+            </div>
+        </aside>
+        <aside class="storm-popup storm-c">
+            <div class="popup-titlebar">
+                <span>Music Update</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <video class="popup-promo-video" src="Summer Dresses Promo 2 - 9x16.mp4" autoplay muted loop playsinline preload="metadata" disablepictureinpicture controlslist="nofullscreen nodownload noplaybackrate noremoteplayback" aria-label="Summer Dresses promo video"></video>
+                <p>SUMMER DRESSES OUT NOW HIT PLAY</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">OPEN THE TRACK</a>
+            </div>
+        </aside>
+        <aside class="storm-popup storm-d">
+            <div class="popup-titlebar">
+                <span>Featured Release</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <p>SUMMER DRESSES JUST LANDED LISTEN NOW</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">STREAM IT FAST</a>
+            </div>
+        </aside>
+        <aside class="storm-popup storm-e">
+            <div class="popup-titlebar">
+                <span>Signal Boost</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <p>SUMMER DRESSES RELEASED TAP TO LISTEN</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">HEAR IT FIRST</a>
+            </div>
+        </aside>
+        <aside class="storm-popup storm-f">
+            <div class="popup-titlebar">
+                <span>Player Prompt</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <img class="popup-dog-image" src="summerdesstockimage.jpg" alt="Summer Dresses stock photo">
+                <p>SUMMER DRESSES IS LIVE LISTEN NOW</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">PLAY SUMMER DRESSES</a>
+            </div>
+        </aside>
+        <aside class="storm-popup storm-g">
+            <div class="popup-titlebar">
+                <span>Fresh Drop</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <p>SUMMER DRESSES NEW SINGLE LISTEN NOW</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">TAP TO LISTEN NOW</a>
+            </div>
+        </aside>
+        <aside class="storm-popup storm-h">
+            <div class="popup-titlebar">
+                <span>Band Alert</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <p>SUMMER DRESSES AVAILABLE NOW LISTEN</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">RUN THE SONG</a>
+            </div>
+        </aside>
+        <aside class="storm-popup storm-i">
+            <div class="popup-titlebar">
+                <span>Release Meter</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <p>SUMMER DRESSES OUT TODAY LISTEN NOW</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">START THE TRACK</a>
+            </div>
+        </aside>
+        <aside class="storm-popup storm-j">
+            <div class="popup-titlebar">
+                <span>Listen Prompt</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <p>SUMMER DRESSES IS OUT STREAM NOW</p>
+                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">GO LISTEN NOW</a>
+            </div>
+        </aside>
+    </div>
+
+    <main class="profile-page">
+        <section class="profile-left">
+            <article class="module profile-card">
+                <h1>The Drought</h1>
+                <p class="status">"currently in your top 8"</p>
+                <div class="profile-photo-frame">
+                    <img src="sunlady.png" alt="Sunlady artwork" class="profile-photo profile-photo-sunlady">
+                </div>
+                <p><strong>From:</strong> Salt Lake City, Utah</p>
+                <p><strong>Genre:</strong> Alternative Rock</p>
+                <p><strong>Mood:</strong> Obsessed</p>
+            </article>
+
+            <article class="module">
+                <h2>Contacting The Drought</h2>
+                <ul class="simple-list">
+                    <li><a href="https://www.instagram.com/thedrought_slc/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://open.spotify.com/artist/3uwmjfetdUzoi2ZiRA4NyK" target="_blank" rel="noopener">Spotify</a></li>
+                    <li><a href="https://thedroughtslc.bandcamp.com/music" target="_blank" rel="noopener">Bandcamp</a></li>
+                    <li><a href="#" id="bookUsLink">Book Us</a></li>
+                </ul>
+            </article>
+
+            <article class="module">
+                <h2>Top Friends</h2>
+                <div class="friends-grid">
+                    <span>The Strokes</span>
+                    <span>Radiohead</span>
+                    <span>The Smiths</span>
+                    <span>Coldplay</span>
+                    <span>Steely Dan</span>
+                    <span>Blur</span>
+                    <span>Oasis</span>
+                    <span>The Cure</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="profile-right">
+            <article class="module" id="about">
+                <h2>About Me</h2>
+                <p>The Drought makes alternative rock in Salt Lake City. We are equally invested in lyricism and arrangement, blending folk, rock, indie, and jazz influences.</p>
+                <p>The project explores erosion, fragile systems, economic anxiety, and consuming love. It is impossible to escape obsession amidst the absurdism of modernity.</p>
+            </article>
+
+            <article class="module" id="music">
+                <h2>Latest Single</h2>
+                <div class="music-grid">
+                    <div>
+                        <img src="800x800-5588072--44648005-0891-4E88-BCD3877DEE52AB92--0--1864637--solarcover.jpg" alt="Summer Dresses cover art" class="cover-art">
+                        <p class="song-title">Summer Dresses</p>
+                        <a href="https://ffm.to/the-drought-summer-dresses" class="action-btn" target="_blank" rel="noopener">LISTEN NOW!!!!</a>
+                    </div>
+                    <div>
+                        <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/3uwmjfetdUzoi2ZiRA4NyK?utm_source=generator" width="100%" height="390" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="The Drought on Spotify"></iframe>
+                    </div>
+                </div>
+            </article>
+
+            <article class="module" id="shows">
+                <h2>Shows</h2>
+                <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+                <a class="bit-widget-initializer"
+                    data-artist-name="id_4854520"
+                    data-background-color="rgba(212,208,200,1)"
+                    data-separator-color="rgba(122,122,122,1)"
+                    data-text-color="rgba(0,0,0,1)"
+                    data-font="Verdana"
+                    data-auto-style="false"
+                    data-button-label-capitalization="uppercase"
+                    data-header-capitalization="uppercase"
+                    data-location-capitalization="capitalize"
+                    data-venue-capitalization="capitalize"
+                    data-display-start-time="false"
+                    data-display-limit="all"
+                    data-date-format="MMM D, YYYY"
+                    data-date-orientation="horizontal"
+                    data-date-border-color="#7a7a7a"
+                    data-date-border-width="2px"
+                    data-date-border-radius="2px"
+                    data-event-ticket-cta-size="small"
+                    data-event-ticket-text="Tickets"
+                    data-event-ticket-icon="false"
+                    data-event-ticket-cta-text-color="rgba(0,0,0,1)"
+                    data-event-ticket-cta-bg-color="rgba(192,192,192,1)"
+                    data-event-ticket-cta-border-color="rgba(122,122,122,1)"
+                    data-event-ticket-cta-border-width="2px"
+                    data-event-ticket-cta-border-radius="2px"
+                    data-follow-section-position="hidden"
+                ></a>
+            </article>
+
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
+        <div class="footer-inner">
             <div class="social-links">
                 <a href="https://www.instagram.com/thedrought_slc/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61578166929076" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -81,10 +278,129 @@
     </footer>
 
     <script>
-        function toggleMenu() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('active');
-        }
+        (function () {
+            const menuButton = document.getElementById("menuBtn");
+            const topLinks = document.getElementById("topLinks");
+            const startButton = document.getElementById("startBtn");
+            const navLinks = topLinks ? topLinks.querySelectorAll("a") : [];
+
+            function setMenuState(isOpen) {
+                if (!topLinks) {
+                    return;
+                }
+
+                topLinks.classList.toggle("active", isOpen);
+
+                if (menuButton) {
+                    menuButton.setAttribute("aria-expanded", String(isOpen));
+                }
+
+                if (startButton) {
+                    startButton.setAttribute("aria-expanded", String(isOpen));
+                }
+            }
+
+            if (menuButton && topLinks) {
+                menuButton.addEventListener("click", function () {
+                    const isOpen = !topLinks.classList.contains("active");
+                    setMenuState(isOpen);
+                });
+            }
+
+            if (startButton && topLinks) {
+                startButton.addEventListener("click", function () {
+                    const isOpen = !topLinks.classList.contains("active");
+                    setMenuState(isOpen);
+
+                    const firstNavLink = topLinks.querySelector("a");
+                    if (isOpen && firstNavLink) {
+                        firstNavLink.focus();
+                    }
+                });
+            }
+
+            navLinks.forEach(function (link) {
+                link.addEventListener("click", function () {
+                    setMenuState(false);
+                });
+            });
+
+            function decodeEmail(encoded) {
+                return atob(encoded);
+            }
+
+            const bookingEmail = decodeEmail("dGhlZHJvdWdodHNsY0BnbWFpbC5jb20=");
+            const bookUsLinkElement = document.getElementById("bookUsLink");
+            const popupCloseButtons = document.querySelectorAll(".popup-close");
+
+            if (bookUsLinkElement) {
+                bookUsLinkElement.href = "mailto:" + bookingEmail;
+            }
+
+            popupCloseButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const popupCard = button.closest(".popup-card, .storm-popup");
+                    if (popupCard) {
+                        popupCard.style.display = "none";
+                    }
+                });
+            });
+
+            let dragLayer = 2000;
+
+            function makePopupDraggable(popup) {
+                const handle = popup.querySelector(".popup-titlebar");
+
+                if (!handle) {
+                    return;
+                }
+
+                handle.addEventListener("pointerdown", function (event) {
+                    if (event.button !== 0 || event.target.closest(".popup-close")) {
+                        return;
+                    }
+
+                    const rect = popup.getBoundingClientRect();
+                    const offsetX = event.clientX - rect.left;
+                    const offsetY = event.clientY - rect.top;
+
+                    popup.style.position = "fixed";
+                    popup.style.left = rect.left + "px";
+                    popup.style.top = rect.top + "px";
+                    popup.style.right = "auto";
+                    popup.style.bottom = "auto";
+                    popup.style.margin = "0";
+                    popup.style.zIndex = String(++dragLayer);
+
+                    document.body.style.userSelect = "none";
+
+                    function onPointerMove(moveEvent) {
+                        const popupRect = popup.getBoundingClientRect();
+                        const maxLeft = Math.max(0, window.innerWidth - popupRect.width);
+                        const maxTop = Math.max(0, window.innerHeight - popupRect.height);
+                        const nextLeft = Math.min(Math.max(0, moveEvent.clientX - offsetX), maxLeft);
+                        const nextTop = Math.min(Math.max(0, moveEvent.clientY - offsetY), maxTop);
+
+                        popup.style.left = nextLeft + "px";
+                        popup.style.top = nextTop + "px";
+                    }
+
+                    function stopDragging() {
+                        document.body.style.userSelect = "";
+                        window.removeEventListener("pointermove", onPointerMove);
+                        window.removeEventListener("pointerup", stopDragging);
+                        window.removeEventListener("pointercancel", stopDragging);
+                    }
+
+                    window.addEventListener("pointermove", onPointerMove);
+                    window.addEventListener("pointerup", stopDragging);
+                    window.addEventListener("pointercancel", stopDragging);
+                    event.preventDefault();
+                });
+            }
+
+            document.querySelectorAll(".popup-card, .storm-popup").forEach(makePopupDraggable);
+        })();
     </script>
 </body>
 </html>
