@@ -570,6 +570,10 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 0.35rem;
     padding: 0.55rem;
+    max-height: 64px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-content: start;
 }
 
 .friends-grid span {
@@ -595,6 +599,14 @@ body {
 .profile-right .module > a {
     margin-left: 0.55rem;
     margin-right: 0.55rem;
+}
+
+#about > p:first-of-type {
+    margin-top: 0.55rem;
+}
+
+#about > p:last-of-type {
+    margin-bottom: 0.2rem;
 }
 
 .music-grid {
