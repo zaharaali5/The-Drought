@@ -36,7 +36,7 @@ body {
 }
 
 .topbar-inner {
-    width: min(1080px, calc(100% - 1rem));
+    width: min(1240px, calc(100% - 1rem));
     margin: 0 auto;
     min-height: 54px;
     position: relative;
@@ -312,7 +312,7 @@ body {
 .storm-c { top: 1vh; left: 50vw; transform: rotate(-1.2deg); z-index: 999; animation-delay: 0.24s; }
 .storm-d { top: 23vh; left: 27vw; transform: rotate(2.4deg); z-index: 4; animation-delay: 0.36s; }
 .storm-e { top: 30vh; left: 49vw; transform: rotate(-2.1deg); z-index: 5; animation-delay: 0.48s; }
-.storm-f { top: 22vh; left: 66vw; transform: rotate(1.1deg); z-index: 6; animation-delay: 0.6s; }
+.storm-f { top: 3vh; left: 28vw; transform: rotate(0deg); z-index: 1001; animation-delay: 0.6s; }
 .storm-g { top: 47vh; left: 18vw; transform: rotate(-2.8deg); z-index: 7; animation-delay: 0.72s; }
 .storm-h { top: 52vh; left: 39vw; transform: rotate(1.9deg); z-index: 8; animation-delay: 0.84s; }
 .storm-i { top: 49vh; left: 60vw; transform: rotate(-1.6deg); z-index: 9; animation-delay: 0.96s; }
@@ -329,6 +329,7 @@ body {
         display: grid;
         grid-template-columns: 220px minmax(0, 1fr) 220px;
         grid-template-rows: auto auto;
+        align-items: start;
         gap: 0.75rem;
         padding: 0 0.7rem;
         align-content: start;
@@ -345,6 +346,7 @@ body {
         left: auto;
         width: 100%;
         max-width: 220px;
+        align-self: start;
     }
 
     .popup-a {
@@ -393,6 +395,13 @@ body {
         right: 0.5rem;
         animation-delay: 0.18s;
     }
+
+    .mobile-popup-merch {
+        top: auto;
+        bottom: 0.6rem;
+        left: 0.5rem;
+        animation-delay: 0.36s;
+    }
 }
 
 @media (max-width: 420px) {
@@ -402,6 +411,10 @@ body {
 
     .mobile-popup-pet {
         top: 46vh;
+    }
+
+    .mobile-popup-merch {
+        bottom: 0.45rem;
     }
 }
 
@@ -420,11 +433,35 @@ body {
 .profile-page {
     position: relative;
     z-index: 1;
-    width: min(1080px, calc(100% - 1rem));
+    width: min(1240px, calc(100% - 1rem));
     margin: 0.95rem auto;
     display: grid;
     grid-template-columns: 290px 1fr;
     gap: 0.8rem;
+}
+
+.merch-sidebar-module {
+    padding: 0.55rem;
+}
+
+.merch-sidebar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+    margin-bottom: 0.45rem;
+}
+
+.merch-sidebar-image {
+    width: 100%;
+    display: block;
+    border-top: 2px solid #7a7a7a;
+    border-left: 2px solid #7a7a7a;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.merch-sidebar-module .action-btn {
+    margin-top: 0.15rem;
 }
 
 .module {
@@ -636,7 +673,7 @@ body {
 }
 
 .footer-inner {
-    width: min(1080px, calc(100% - 1rem));
+    width: min(1240px, calc(100% - 1rem));
     margin: 0 auto;
     padding: 0.75rem 0;
     text-align: center;

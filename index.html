@@ -26,6 +26,7 @@
                 <nav class="top-links" id="topLinks">
                     <a href="#about">About</a>
                     <a href="#music">Music</a>
+                    <a href="#merch">Merch</a>
                     <a href="#shows">Shows</a>
                 </nav>
             </div>
@@ -121,13 +122,13 @@
         </aside>
         <aside class="storm-popup storm-f">
             <div class="popup-titlebar">
-                <span>Player Prompt</span>
+                <span>LIMITED EDITION TEES</span>
                 <button class="popup-close" type="button" aria-label="Close popup">x</button>
             </div>
             <div class="popup-body">
-                <img class="popup-dog-image" src="summerdesstockimage.jpg" alt="Summer Dresses stock photo">
-                <p>SUMMER DRESSES IS LIVE LISTEN NOW</p>
-                <a href="https://ffm.to/the-drought-summer-dresses" target="_blank" rel="noopener">PLAY SUMMER DRESSES</a>
+                <img class="popup-dog-image" src="jackback.jpeg" alt="The Drought merch photo">
+                <p>ONLY AVAILABLE AT LIVE SHOWS</p>
+                <a href="https://www.bandsintown.com/a/4854520-the-drought" target="_blank" rel="noopener">CLICK FOR LIVE SHOWS</a>
             </div>
         </aside>
         <aside class="storm-popup storm-g">
@@ -195,6 +196,17 @@
                 <a href="https://open.spotify.com/album/1JcGyIqkJWkTRZcMPJ3370" target="_blank" rel="noopener">CLICK HERE FOR PET NAMES</a>
             </div>
         </aside>
+        <aside class="mobile-popup mobile-popup-merch">
+            <div class="popup-titlebar">
+                <span>LIMITED EDITION TEES</span>
+                <button class="popup-close" type="button" aria-label="Close popup">x</button>
+            </div>
+            <div class="popup-body">
+                <img class="popup-dog-image" src="jackback.jpeg" alt="The Drought merch photo">
+                <p>ONLY AVAILABLE AT LIVE SHOWS</p>
+                <a href="https://www.bandsintown.com/a/4854520-the-drought" target="_blank" rel="noopener">CLICK FOR LIVE SHOWS</a>
+            </div>
+        </aside>
     </div>
 
     <main class="profile-page">
@@ -232,6 +244,16 @@
                     <span>Oasis</span>
                     <span>The Cure</span>
                 </div>
+            </article>
+
+            <article class="module merch-sidebar-module">
+                <h2>Merch Table</h2>
+                <div class="merch-sidebar-grid">
+                    <img src="merchfrontin.jpg" alt="Merch front detail" class="merch-sidebar-image">
+                    <img src="merchbackin.jpg" alt="Merch back detail" class="merch-sidebar-image">
+                </div>
+                <p>Only sold at live shows.</p>
+                <a href="https://www.bandsintown.com/a/4854520-the-drought" class="action-btn" target="_blank" rel="noopener">SEE LIVE SHOWS</a>
             </article>
         </section>
 
@@ -356,6 +378,8 @@
                 return atob(encoded);
             }
 
+            const popupsEnabled = true;
+
             function tryAutoplayVideo(video) {
                 if (!video) {
                     return;
@@ -376,9 +400,17 @@
             const bookUsLinkElement = document.getElementById("bookUsLink");
             const popupCloseButtons = document.querySelectorAll(".popup-close");
             const popupVideos = document.querySelectorAll(".popup-promo-video");
+            const popupLayers = document.querySelectorAll(".popup-chaos, .popup-storm, .mobile-popup-layer");
 
             if (bookUsLinkElement) {
                 bookUsLinkElement.href = "mailto:" + bookingEmail;
+            }
+
+            if (!popupsEnabled) {
+                popupLayers.forEach(function (layer) {
+                    layer.style.display = "none";
+                });
+                return;
             }
 
             popupCloseButtons.forEach(function (button) {
