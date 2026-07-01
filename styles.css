@@ -264,12 +264,6 @@ body {
     animation-delay: 0.3s;
 }
 
-.popup-c {
-    bottom: 84px;
-    right: 14vw;
-    animation-delay: 0.6s;
-}
-
 .popup-storm {
     position: fixed;
     inset: 74px 0 0;
@@ -311,12 +305,6 @@ body {
 .storm-b { top: 9vh; left: 41vw; transform: rotate(1.5deg); z-index: 2; animation-delay: 0.12s; }
 .storm-c { top: 1vh; left: 50vw; transform: rotate(-1.2deg); z-index: 999; animation-delay: 0.24s; }
 .storm-d { top: 23vh; left: 27vw; transform: rotate(2.4deg); z-index: 4; animation-delay: 0.36s; }
-.storm-e { top: 30vh; left: 49vw; transform: rotate(-2.1deg); z-index: 5; animation-delay: 0.48s; }
-.storm-f { top: 3vh; left: 28vw; transform: rotate(0deg); z-index: 1001; animation-delay: 0.6s; }
-.storm-g { top: 47vh; left: 18vw; transform: rotate(-2.8deg); z-index: 7; animation-delay: 0.72s; }
-.storm-h { top: 52vh; left: 39vw; transform: rotate(1.9deg); z-index: 8; animation-delay: 0.84s; }
-.storm-i { top: 49vh; left: 60vw; transform: rotate(-1.6deg); z-index: 9; animation-delay: 0.96s; }
-.storm-j { top: 69vh; left: 35vw; transform: rotate(2.7deg); z-index: 10; animation-delay: 1.08s; }
 
 /* Desktop side ads are independent from the popup storm layer. */
 @media (min-width: 1100px) {
@@ -328,7 +316,6 @@ body {
         inset: 78px 0 0;
         display: grid;
         grid-template-columns: 220px minmax(0, 1fr) 220px;
-        grid-template-rows: auto auto;
         align-items: start;
         gap: 0.75rem;
         padding: 0 0.7rem;
@@ -361,13 +348,6 @@ body {
         justify-self: start;
         animation-delay: 0.3s;
     }
-
-    .popup-c {
-        grid-column: 3;
-        grid-row: 2;
-        justify-self: end;
-        animation-delay: 0.6s;
-    }
 }
 
 @media (max-width: 1099px) {
@@ -384,13 +364,13 @@ body {
         z-index: 48;
     }
 
-    .mobile-popup-video {
+    .mobile-popup-presave {
         top: 0.5rem;
         left: 0.5rem;
         animation-delay: 0s;
     }
 
-    .mobile-popup-pet {
+    .mobile-popup-wander {
         top: 42vh;
         right: 0.5rem;
         animation-delay: 0.18s;
@@ -409,7 +389,7 @@ body {
         width: min(230px, calc(100vw - 0.75rem));
     }
 
-    .mobile-popup-pet {
+    .mobile-popup-wander {
         top: 46vh;
     }
 
