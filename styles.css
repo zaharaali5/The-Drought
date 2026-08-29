@@ -9,10 +9,12 @@ body {
 }
 
 body {
-    font-family: "MS Sans Serif", Tahoma, Verdana, sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     background: #008080;
     color: #000;
     min-height: 100vh;
+    font-size: 16px;
+    letter-spacing: 0.05em;
 }
 
 @keyframes spinHorizontal {
@@ -382,6 +384,70 @@ body {
         left: 0.5rem;
         animation-delay: 0.36s;
     }
+
+    .profile-right {
+        grid-template-columns: 1fr;
+    }
+
+    .music-featured {
+        flex-direction: column;
+    }
+
+    .cover-art-featured {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .post-image {
+        width: 140px;
+        height: 140px;
+        flex-shrink: 0;
+    }
+
+    .post-text {
+        max-width: none;
+    }
+
+    .spotify-player {
+        height: 550px;
+        background: #a8a8a8;
+        border: 2px solid #7a7a7a;
+    }
+
+    .module {
+        margin-bottom: 0.6rem;
+    }
+
+    .module h2 {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.35rem;
+    }
+
+    .merch-sidebar-module,
+    .profile-card {
+        padding: 0.4rem;
+    }
+
+    .sunlady-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sunlady-rotating {
+        width: 80px;
+        height: 80px;
+    }
+
+    #about,
+    #recent-posts {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
 }
 
 @media (max-width: 420px) {
@@ -569,6 +635,12 @@ body {
     padding: 0.3rem 0.2rem;
 }
 
+.profile-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
 .profile-right .module {
     padding-bottom: 0.55rem;
 }
@@ -581,12 +653,308 @@ body {
     margin-right: 0.55rem;
 }
 
+#shows {
+    grid-column: 1 / -1;
+}
+
+#now-listening {
+    grid-column: 1 / -1;
+}
+
+.music-featured {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+}
+
+.cover-art-featured {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-top: 2px solid #7a7a7a;
+    border-left: 2px solid #7a7a7a;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    object-fit: cover;
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.album-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+}
+
+.album-subtitle {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0;
+    color: #666;
+}
+
+.album-description {
+    font-size: 0.85rem;
+    margin: 0.3rem 0 0.5rem 0;
+    line-height: 1.4;
+    color: #333;
+}
+
+.music-info .action-btn {
+    align-self: flex-start;
+}
+
+.spotify-player {
+    padding: 0.55rem;
+    background: #a8a8a8;
+    border: 2px solid #7a7a7a;
+    border-radius: 8px;
+}
+
+.spotify-embed {
+    width: 100%;
+    height: 300px;
+    display: block;
+    border-radius: 4px;
+}
+
+.sunlady-container {
+    display: none;
+}
+
+#now-listening {
+    grid-column: 1 / -1;
+}
+
+.sunlady-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sunlady-rotating {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: spinHorizontal 12s linear infinite;
+}
+
+#recent-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-posts-container {
+    padding: 0.55rem;
+    padding-top: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.myspace-post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    height: 100%;
+}
+
+@media (min-width: 1100px) {
+    #recent-posts .recent-posts-container {
+        padding-bottom: 0.2rem;
+    }
+
+    #recent-posts .myspace-post .action-btn {
+        margin-top: auto;
+    }
+}
+
+.post-header {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    margin-top: 1rem;
+}
+
+.post-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-top: 2px solid #7a7a7a;
+    border-left: 2px solid #7a7a7a;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    object-fit: cover;
+}
+
+.post-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.post-author {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #000;
+}
+
+.post-time {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.post-content {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.post-image {
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.post-text {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    flex: 1;
+}
+
+.post-text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+    max-width: 250px;
+}
+}
+
+.post-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    border-top: 2px solid #7a7a7a;
+    border-left: 2px solid #7a7a7a;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 0.6rem;
+    background: #f0f0f0;
+    margin-top: 0.4rem;
+}
+
+.comments-header {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.4rem;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-height: 45px;
+    overflow-y: auto;
+}
+
+.comment {
+    margin: 0;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-author {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.comment-text {
+    margin: 0.2rem 0 0 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #333;
+    font-style: italic;
+}
+
+.see-more-comments {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding-top: 0.4rem;
+    border-top: 1px solid #ccc;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.see-more-comments:hover {
+    color: #1084d0;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0 !important;
+}
+
+#about > h2 {
+    flex-shrink: 0;
+}
+
+#about .sunlady-circle {
+    margin-top: 0.4rem;
+    margin-bottom: 0.55rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+}
+
+#about > p {
+    margin-left: 0.55rem;
+    margin-right: 0.55rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
 #about > p:first-of-type {
     margin-top: 0.55rem;
+    margin-bottom: 0.4rem;
 }
 
 #about > p:last-of-type {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.55rem;
 }
 
 .music-grid {
@@ -726,6 +1094,12 @@ iframe {
 
     .spotify-embed {
         height: 390px;
+    }
+
+    .spotify-player {
+        height: 480px;
+        background: #a8a8a8;
+        border: 2px solid #7a7a7a;
     }
 }
 

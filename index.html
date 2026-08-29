@@ -9,6 +9,9 @@
     <meta name="description" content="The Drought Official Website with music, shows, and band updates.">
     <link rel="canonical" href="https://www.thedrought.band/">
     <link rel="icon" href="sunlady.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -16,10 +19,6 @@
     <!-- Website built by Zahara Ali -->
     <header class="topbar" id="home">
         <div class="topbar-inner">
-            <button class="start-btn" id="startBtn" type="button" aria-label="Open navigation menu">
-                <span class="start-icon" aria-hidden="true"></span>
-                Start
-            </button>
             <div class="window-strip">
                 <a class="logo" href="#home">The Drought Official Website</a>
                 <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="topLinks" aria-label="Toggle navigation">Menu</button>
@@ -136,11 +135,11 @@
                 <h1>The Drought</h1>
                 <p class="status">"currently in your top 8"</p>
                 <div class="profile-photo-frame">
-                    <img src="sunlady.png" alt="Sunlady artwork" class="profile-photo profile-photo-sunlady">
+                    <img src="band photo.jpg" alt="The Drought band photo" class="profile-photo">
                 </div>
                 <p><strong>From:</strong> Salt Lake City, Utah</p>
                 <p><strong>Genre:</strong> Alternative Rock</p>
-                <p><strong>Mood:</strong> Obsessed</p>
+                <p><strong>Mood:</strong> Grateful</p>
             </article>
 
             <article class="module merch-sidebar-module">
@@ -183,18 +182,47 @@
                 <h2>About Me</h2>
                 <p>The Drought makes alternative rock in Salt Lake City. We are equally invested in lyricism and arrangement, blending folk, rock, indie, and jazz influences.</p>
                 <p>The project explores erosion, fragile systems, economic anxiety, and consuming love. It is impossible to escape obsession amidst the absurdism of modernity.</p>
+                <div class="sunlady-circle">
+                    <img src="sunlady.png" alt="Sunlady artwork - The Drought logo" class="sunlady-rotating">
+                </div>
             </article>
 
-            <article class="module" id="music">
-                <h2>Music</h2>
-                <div class="music-grid">
-                    <div>
-                        <img src="wasp cover.jpg" alt="People Tell Stories album cover" class="cover-art">
-                        <p class="song-title">PEOPLE TELL STORIES</p>
+            <article class="module" id="recent-posts">
+                <h2>Recent Posts</h2>
+                <div class="recent-posts-container">
+                    <div class="myspace-post">
+                        <div class="post-header">
+                            <img src="band photo.jpg" alt="The Drought" class="post-avatar">
+                            <div class="post-meta">
+                                <p class="post-author">The Drought</p>
+                                <p class="post-time">Today</p>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <img src="wasp cover.jpg" alt="People Tell Stories album cover" class="post-image">
+                            <div class="post-text-section">
+                                <p class="post-text">People Tell Stories is out now!! This is our first ever album out as The Drought and we're super excited to share it with you</p>
+                                <div class="post-comments">
+                                    <h3 class="comments-header">Comments</h3>
+                                    <div class="comments-list">
+                                        <div class="comment">
+                                            <p class="comment-author">@chris.athens</p>
+                                            <p class="comment-text">The moment we've all been waiting for!!!!!🔥❤️🙌</p>
+                                        </div>
+                                        <div class="comment">
+                                            <p class="comment-author">@ginger.suxx</p>
+                                            <p class="comment-text">SO PROUD</p>
+                                        </div>
+                                        <div class="comment">
+                                            <p class="comment-author">@nurdge</p>
+                                            <p class="comment-text">Congrats gang!</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="see-more-comments">+23 more comments</a>
+                                </div>
+                            </div>
+                        </div>
                         <a href="https://distrokid.com/hyperfollow/thedrought/people-tell-stories" class="action-btn" target="_blank" rel="noopener">LISTEN NOW</a>
-                    </div>
-                    <div>
-                        <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/3uwmjfetdUzoi2ZiRA4NyK?utm_source=generator" width="100%" height="390" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="The Drought on Spotify"></iframe>
                     </div>
                 </div>
             </article>
@@ -232,6 +260,13 @@
                 ></a>
             </article>
 
+            <article class="module" id="now-listening">
+                <h2>Now Listening</h2>
+                <div class="spotify-player">
+                    <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/3uwmjfetdUzoi2ZiRA4NyK?utm_source=generator" width="100%" height="300" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="The Drought on Spotify"></iframe>
+                </div>
+            </article>
+
         </section>
     </main>
 
@@ -251,7 +286,6 @@
         (function () {
             const menuButton = document.getElementById("menuBtn");
             const topLinks = document.getElementById("topLinks");
-            const startButton = document.getElementById("startBtn");
             const navLinks = topLinks ? topLinks.querySelectorAll("a") : [];
 
             function setMenuState(isOpen) {
@@ -264,28 +298,12 @@
                 if (menuButton) {
                     menuButton.setAttribute("aria-expanded", String(isOpen));
                 }
-
-                if (startButton) {
-                    startButton.setAttribute("aria-expanded", String(isOpen));
-                }
             }
 
             if (menuButton && topLinks) {
                 menuButton.addEventListener("click", function () {
                     const isOpen = !topLinks.classList.contains("active");
                     setMenuState(isOpen);
-                });
-            }
-
-            if (startButton && topLinks) {
-                startButton.addEventListener("click", function () {
-                    const isOpen = !topLinks.classList.contains("active");
-                    setMenuState(isOpen);
-
-                    const firstNavLink = topLinks.querySelector("a");
-                    if (isOpen && firstNavLink) {
-                        firstNavLink.focus();
-                    }
                 });
             }
 
