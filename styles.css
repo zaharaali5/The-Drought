@@ -301,10 +301,10 @@ body {
     animation: popupWobble 1.2s steps(2, end) infinite;
 }
 
-.storm-a { top: 2vh; left: 19vw; transform: rotate(-2deg); z-index: 1; animation-delay: 0s; }
-.storm-b { top: 9vh; left: 41vw; transform: rotate(1.5deg); z-index: 2; animation-delay: 0.12s; }
-.storm-c { top: 1vh; left: 50vw; transform: rotate(-1.2deg); z-index: 999; animation-delay: 0.24s; }
-.storm-d { top: 23vh; left: 27vw; transform: rotate(2.4deg); z-index: 4; animation-delay: 0.36s; }
+.storm-a { top: 2vh; left: 5vw; transform: rotate(-2deg); z-index: 1; animation-delay: 0s; }
+.storm-b { top: 9vh; left: 35vw; transform: rotate(1.5deg); z-index: 2; animation-delay: 0.12s; }
+.storm-c { top: 1vh; left: 65vw; transform: rotate(-1.2deg); z-index: 999; animation-delay: 0.24s; }
+.storm-d { top: 23vh; left: 80vw; transform: rotate(2.4deg); z-index: 4; animation-delay: 0.36s; }
 
 /* Desktop side ads are independent from the popup storm layer. */
 @media (min-width: 1100px) {
